@@ -1,0 +1,2 @@
+# Devel::Cover has all tests one level deeper than usual
+t/*/*.t

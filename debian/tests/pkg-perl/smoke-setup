@@ -1,0 +1,24 @@
+#!/bin/sh
+
+### Devel::Cover autopkgtest setup -- Axel Beckert, 2016-Apr-21
+
+# Create an empty directory where Makefile.PL can dump Inc.pm into.
+mkdir -pv $TDIR/lib/Devel/Cover/
+
+# Copy lib/Devel/Cover.pm for Makefile.PL's ABSTRACT_FROM.
+cp -pv lib/Devel/Cover.pm $TDIR/lib/Devel/;
+
+# Switch to the temporary directory and call Makefile.PL there to get
+# all the paths in the generated files right.
+cd $TDIR;
+perl Makefile.PL
+
+# Remove copied lib/Devel/Cover.pm again so this local copy from the
+# source code can't be used and the installed version is used instead.
+rm -vf lib/Devel/Cover.pm
+
+# Symlink /usr/bin to $TDIR/bin so that bin/cover is the installed
+# version at /usr/bin/cover. Same for the directory with the Report
+# modules.
+ln -vs /usr/bin ./
+ln -vs /usr/lib/*/perl5/5*/Devel/Cover/Report lib/Devel/Cover/Report

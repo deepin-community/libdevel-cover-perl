@@ -1,0 +1,577 @@
+libdevel-cover-perl (1.36-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Mon, 14 Nov 2022 17:44:39 +0800
+
+libdevel-cover-perl (1.36-2) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Reduce Build-Depends: (Closes: #980532)
+    + Annotate all perl libraries but libtemplate-perl <!nocheck>.
+    + Drop perl:native, which is implicit in perl-xs-dev.
+
+  [ Axel Beckert ]
+  * Declare compliance with Debian Policy 4.5.1. (No changes needed.)
+
+ -- Axel Beckert <abe@debian.org>  Fri, 22 Jan 2021 04:32:32 +0100
+
+libdevel-cover-perl (1.36-1) unstable; urgency=medium
+
+  * Team upload.
+  * Import upstream version 1.36.
+
+ -- Niko Tyni <ntyni@debian.org>  Tue, 19 May 2020 17:07:09 +0300
+
+libdevel-cover-perl (1.35-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Wrap long lines in changelog entries: 0.57-1.
+  * Set upstream metadata fields: Bug-Submit, Repository.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+  * Update standards version to 4.4.1, no changes needed.
+
+  [ gregor herrmann ]
+  * debian/control: update Build-Depends for cross builds.
+  * debian/watch: use uscan version 4.
+
+  [ Niko Tyni ]
+  * Import upstream version 1.35.
+  * Update to debhelper compat level 13.
+
+ -- Niko Tyni <ntyni@debian.org>  Mon, 18 May 2020 18:56:23 +0300
+
+libdevel-cover-perl (1.33-1) unstable; urgency=medium
+
+  [ Laurent Baillet ]
+  * fix lintian file-contains-trailing-whitespace warning
+
+  [ Axel Beckert ]
+  * Import new upstream release 1.33.
+    + Suggest libterm-size-perl.
+  * Apply "wrap-and-sort -a".
+  * Declare compliance with Debian Policy 4.4.0. (No changes needed.)
+  * Bump debhelper compatibility level to 12.
+    + Replace debian/compat with a versioned b-d on debhelper-compat.
+  * Add optional test-only build-dependencies with <!nocheck>:
+    + libdbm-deep-perl
+    + libmoo-perl
+    + libreadonly-perl
+    + libmoose-perl
+
+ -- Axel Beckert <abe@debian.org>  Sun, 01 Sep 2019 12:59:12 +0200
+
+libdevel-cover-perl (1.31-1) unstable; urgency=medium
+
+  * Import upstream version 1.31.
+  * Update years of upstream and packaging copyright.
+  * Declare compliance with Debian Policy 4.2.1.
+  * Update versioned alternative (build) dependency. Thanks to cme.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 21 Sep 2018 20:26:40 +0200
+
+libdevel-cover-perl (1.30-1) unstable; urgency=medium
+
+  * Team upload.
+  * Import upstream version 1.30
+  * Declare compliance with Debian Policy 4.1.5
+  * Bump debhelper compatibility level to 11
+
+ -- Lucas Kanashiro <kanashiro@debian.org>  Sun, 22 Jul 2018 06:30:45 -0300
+
+libdevel-cover-perl (1.29-2) unstable; urgency=medium
+
+  [ Damyan Ivanov ]
+  * declare conformance with Policy 4.1.3 (no changes needed)
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Dominic Hargreaves ]
+  * Add Build-Depends on libb-debug-perl (Closes: #898993)
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 18 May 2018 12:10:55 +0200
+
+libdevel-cover-perl (1.29-1) unstable; urgency=medium
+
+  * Import upstream version 1.29.
+    + Remove MYMETA.json.lock in clean target.
+  * Set "Rules-Requires-Root: no".
+
+ -- Axel Beckert <abe@debian.org>  Sun, 12 Nov 2017 22:44:31 +0100
+
+libdevel-cover-perl (1.28-1) unstable; urgency=medium
+
+  * Import upstream version 1.28.
+  * Drop spelling.patch, merged upstream.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 14 Oct 2017 17:04:22 +0200
+
+libdevel-cover-perl (1.27-1) unstable; urgency=medium
+
+  * Import upstream version 1.27
+    Fixes "unexpected OP_PADRANGE at /usr/share/perl/5.20/B/Deparse.pm"
+    (Closes: #789487)
+  * Drop reproducible-build.patch, fixed (differently) upstream.
+  * Install more upstream docs.
+  * Declare compliance with Debian Policy 4.1.1.
+  * Drop version from libhtml-parser-perl (build) dependency.
+    Nothing older in the archive.
+  * Add a patch to fix a typo in the documentation.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 30 Sep 2017 15:02:56 +0200
+
+libdevel-cover-perl (1.25-2) unstable; urgency=medium
+
+  * Upload to unstable after the stretch release.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 17 Jun 2017 21:05:09 +0200
+
+libdevel-cover-perl (1.25-1) experimental; urgency=medium
+
+  * Import upstream version 1.25.
+  * Refresh reproducible-build.patch.
+  * Drop spelling.patch, merged upstream.
+  * Update years of upstream and packaging copyright.
+  * Update Suggests.
+  * Update Homepage in debian/upstream/metadata to use https.
+  * Upload to experimental because of the freeze.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 20 May 2017 23:06:57 +0200
+
+libdevel-cover-perl (1.23-2) unstable; urgency=medium
+
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * debian/upstream/metadata: use HTTPS for GitHub URLs.
+  * Remove Jonathan Yu from Uploaders. Thanks for your work!
+  * Add patch to make build reproducible.
+    Thanks to Chris Lamb for the bug report and the patch.
+    (Closes: #835871)
+  * Add debian/gbp.conf to filter out .gitignore from upstream tarball.
+  * Update years of packaging copyright.
+  * Add a patch to fix documentation typos.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 31 Aug 2016 20:04:12 +0200
+
+libdevel-cover-perl (1.23-1) unstable; urgency=medium
+
+  * Import upstream version 1.23
+
+ -- Axel Beckert <abe@debian.org>  Fri, 13 May 2016 11:06:33 +0200
+
+libdevel-cover-perl (1.22-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ Axel Beckert ]
+  * Imported upstream version 1.22. Happy 15th Birthday, Devel::Cover!
+  * Declare compliance with Debian Policy 3.9.8. (No changes needed.)
+  * Add support for autopkgtest. Requires pkg-perl-autopkgtest ≥ 0.29.
+  * Enable all hardening flags.
+
+ -- Axel Beckert <abe@debian.org>  Fri, 22 Apr 2016 00:23:23 +0200
+
+libdevel-cover-perl (1.21-1) unstable; urgency=medium
+
+  * Import upstream version 1.21
+
+ -- Axel Beckert <abe@debian.org>  Thu, 24 Sep 2015 00:42:02 +0200
+
+libdevel-cover-perl (1.20-1) unstable; urgency=medium
+
+  * Import upstream version 1.20 (only documentation enhancements)
+
+ -- Axel Beckert <abe@debian.org>  Mon, 13 Jul 2015 18:47:14 +0200
+
+libdevel-cover-perl (1.19-1) unstable; urgency=medium
+
+  * Import upstream version 1.19
+    + Fixes FTBFS with Perl 5.22. (Closes: #787445)
+    + Remove build-dependency on libtest-warn-perl.
+
+ -- Axel Beckert <abe@debian.org>  Sun, 05 Jul 2015 19:46:14 +0200
+
+libdevel-cover-perl (1.18-1) unstable; urgency=medium
+
+  * New upstream release.
+    + Replace (build-)dependency on "libcgi-pm-perl | perl (<< 5.19~)" for
+      CGI.pm with "libhtml-parser-perl (>= 3.69)" for HTML::Entities.
+
+ -- Axel Beckert <abe@debian.org>  Sun, 26 Apr 2015 03:49:22 +0200
+
+libdevel-cover-perl (1.17-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.6 (no changes needed).
+  * Add myself to uploaders.
+  * Update Github URLs in debian/upstream/metadata by using git:// and
+    https:// instead of 2x http://.
+
+ -- Axel Beckert <abe@debian.org>  Sat, 27 Sep 2014 14:17:35 +0200
+
+libdevel-cover-perl (1.16-2) unstable; urgency=medium
+
+  * Team upload from the Swiss Perl Workshop
+  * Add gcc to Recommends for /usr/bin/gcov as Devel::Cover uses it
+    automatically in case it runs over Inline::C or XS code.
+  * Promote libtemplate-perl from Suggests to Recommends as
+    Devel::Cover::Report::Html_basic uses it. Thanks to Elmar Heeb for
+    reporting this issue.
+
+ -- Axel Beckert <abe@debian.org>  Sat, 06 Sep 2014 17:03:51 +0200
+
+libdevel-cover-perl (1.16-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ Damyan Ivanov ]
+  * Imported Upstream version 1.16
+  * Add debian/upstream/metadata
+
+ -- Damyan Ivanov <dmn@debian.org>  Tue, 26 Aug 2014 14:51:58 +0000
+
+libdevel-cover-perl (1.15-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add new upstream recommendations to Suggests: in debian/control.
+  * Explicitly (build-) depend on CGI.pm.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 06 Jun 2014 14:37:00 +0200
+
+libdevel-cover-perl (1.14-2) unstable; urgency=medium
+
+  * Slightly loosen the dependency on the current perl version to allow
+    for release candidates (of the form 5.20.0~rc1).
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 18 May 2014 15:10:49 +0200
+
+libdevel-cover-perl (1.14-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 03 May 2014 15:04:47 +0200
+
+libdevel-cover-perl (1.10-1) unstable; urgency=medium
+
+  * debian/control: remove Nicholas Bamber from Uploaders on request of
+    the MIA team.
+  * Strip trailing slash from metacpan URLs.
+  * New upstream release.
+  * Add libsereal-(de|en)coder-perl to Suggests.
+    Optionally used by the database backend.
+  * Update years of upstream and packaging copyright.
+  * Declare compliance with Debian Policy 3.9.5.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 07 Apr 2014 20:26:58 +0200
+
+libdevel-cover-perl (1.08-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop patch pod-encoding.patch, merged upstream.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 22 Sep 2013 17:35:45 +0200
+
+libdevel-cover-perl (1.07-2) unstable; urgency=low
+
+  * Add patch that adds encoding to the POD.
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 22 Aug 2013 14:33:59 +0200
+
+libdevel-cover-perl (1.07-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Refresh patch keep-non-existent-dirs-in-INC.patch.
+  * Bump Standards-Version to 3.9.4 (no changes).
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Florian Schlichting ]
+  * Import Upstream version 1.07 (closes: #702847)
+  * Bump years of upstream copyright
+  * Drop keep-non-existent-dirs-in-INC.patch, fixed upstream (but differently)
+  * Add myself to uploaders and copyright
+
+ -- Florian Schlichting <fsfs@debian.org>  Thu, 22 Aug 2013 14:10:04 +0200
+
+libdevel-cover-perl (0.96-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated debian/copyright
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Sun, 30 Sep 2012 20:34:40 +0100
+
+libdevel-cover-perl (0.93-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Nuno Carvalho ]
+  * Drop whatis.patch, fixed upstream.
+  * Refresh keep-non-existent-dirs-in-INC.patch.
+  * New upstream release.
+
+  [ gregor herrmann ]
+  * Remove alternative libjson-pp-perl from Suggests:. We are already
+    depending on perl >= 5.14.2 which contains JSON::PP.
+
+ -- Nuno Carvalho <smash@cpan.org>  Sun, 05 Aug 2012 00:36:55 +0100
+
+libdevel-cover-perl (0.89-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop path-regexp.patch, merged upstream.
+  * Refresh whatis.patch, which was partly applied upstream.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 16 Jun 2012 15:53:07 +0200
+
+libdevel-cover-perl (0.88-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright: update upstream's email address.
+  * Refresh patches.
+  * Add libbrowser-open-perl to Suggests.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 09 Jun 2012 15:28:09 +0200
+
+libdevel-cover-perl (0.87-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop spelling.patch, refresh path-regexp.patch and whatis.patch.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 02 Jun 2012 19:10:55 +0200
+
+libdevel-cover-perl (0.86-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update years of upstream copyright.
+  * Refresh 2 patches (offset, version numbers).
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 10 Apr 2012 19:54:07 +0200
+
+libdevel-cover-perl (0.85-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Nicholas Bamber ]
+  * New upstream release 0.79
+
+  [ gregor herrmann ]
+  * Unify "sameperl" substvar generation across packages.
+
+  * New upstream release 0.85.
+  * Drop whatis.patch, refresh remaining patches.
+  * debian/copyright: update to Copyright-Format 1.0.
+  * Bump Standards-Version to 3.9.3 (no changes).
+  * Use debhelper 9.20120312 to get all hardening flags.
+  * Add libjson-xs-perl to Suggests.
+  * Add a new whatis.patch.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 07 Apr 2012 15:20:29 +0200
+
+libdevel-cover-perl (0.77-1) unstable; urgency=low
+
+  * New upstream release
+  * Refreshed path-regex.patch
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Tue, 17 May 2011 01:33:27 +0100
+
+libdevel-cover-perl (0.76-1) unstable; urgency=low
+
+  * New upstream release
+  * Adding Suggests clause for libjson-pp-perl to allow database
+    to be written as JSON
+  * Refreshed patches: path-regexp.patch
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Tue, 19 Apr 2011 09:18:58 +0100
+
+libdevel-cover-perl (0.74-1) unstable; urgency=low
+
+  * New upstream release
+  * Upped standards version to 3.9.2
+  * Updated copyright
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Sun, 17 Apr 2011 19:57:34 +0100
+
+libdevel-cover-perl (0.73-1) unstable; urgency=low
+
+  [ Nicholas Bamber ]
+  * New upstream release 0.72
+  * Added dependency on libtest-warn-perl
+
+  [ gregor herrmann ]
+  * New upstream release 0.73.
+  * Refresh path-regexp.patch.
+  * Add libtemplate-perl, libtest-differences-perl to Build-Depends (used in
+    tests).
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 06 Oct 2010 17:51:21 +0200
+
+libdevel-cover-perl (0.71-1) unstable; urgency=low
+
+  * New upstream release
+  * Added myself to Uploaders
+  * Updated copyright: added myself, removed 'GNU/Linux', date ranges
+  * Updated location of documentation files
+  * Reviewed patches
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Sat, 25 Sep 2010 21:36:10 +0100
+
+libdevel-cover-perl (0.68-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release 0.67
+
+  [ gregor herrmann ]
+  * New upstream release 0.68.
+  * debian/copyright: point to /usr/share/common-licenses/GPL-1.
+  * Set Standards-Version to 3.9.1 (no changes).
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 22 Aug 2010 20:09:45 +0200
+
+libdevel-cover-perl (0.66-2) unstable; urgency=low
+
+  * Add new patch to fix build issues when the build path contains regexp
+    metacharacters; thanks to Niko Tyni for bug report and patch
+    (closes: #579577).
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 28 Apr 2010 23:52:50 +0200
+
+libdevel-cover-perl (0.66-1) unstable; urgency=low
+
+  [ Ryan Niebur ]
+  * Update jawnsy's email address
+
+  [ gregor herrmann ]
+  * New upstream release (Closes: #578809).
+  * Convert to source format 3.0 (quilt). Remove quilt framework.
+  * debian/copyright: update years of upstream copyright and formatting
+    according to current version of DEP5.
+  * Add /me to Uploaders.
+  * Set Standards-Version to 3.8.4 (no changes).
+  * Add new patch to fix a spelling mistake.
+
+  [ Niko Tyni ]
+  * add a dependency on the current Perl upstream version. (Closes: #562214)
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 28 Apr 2010 18:47:51 +0200
+
+libdevel-cover-perl (0.65-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+    + Ensure correct line numbers (RT#37302, fixed by RT#33710)
+  * Use short rules format (--with quilt)
+  * Rewrote control description
+  * Standards-Version 3.8.3 (drop version dependency on perl)
+  * Added myself to Uploaders and Copyright
+  * Drop version dependencies on versions available in oldstable
+  * Updated copyright file to new machine-readable format
+
+  [ gregor herrmann ]
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+  * Remove Florian Ragwitz from Uploaders (closes: #523262).
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ gregor herrmann ]
+  * debian/control: add libtemplate-perl to Suggests.
+
+ -- Jonathan Yu <frequency@cpan.org>  Sat, 22 Aug 2009 16:31:08 -0400
+
+libdevel-cover-perl (0.64-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * Take over for the Debian Perl Group with maintainer's permission
+    (http://lists.debian.org/debian-perl/2008/06/msg00039.html)
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Changed:
+    Maintainer set to Debian Perl Group <pkg-perl-
+    maintainers@lists.alioth.debian.org> (was: Florian Ragwitz
+    <rafl@debian.org>); Florian Ragwitz <rafl@debian.org> moved to
+    Uploaders.
+  * Add debian/watch.
+  * add whatis.patch fixing missing whatis entry for
+    Devel::Cover::Tutorial manual page
+
+  [ Damyan Ivanov ]
+  * trim down debian/rules using debhelper 7
+  * add keep-non-existent-dirs-in-INC.patch preventing ommission of
+    non-existing at build-time directories from Devel::Cover::Inc's @inc.
+    Examples of such directories are the /usr/local parts of Perl's @INC.
+    Closes: #476272
+    + add quilt do B-D and debian/rules
+    + add README.source
+  * Standards-Version: 3.8.0 (no further changes needed)
+  * add myself to Uploaders
+
+ -- Damyan Ivanov <dmn@debian.org>  Thu, 03 Jul 2008 02:00:40 +0300
+
+libdevel-cover-perl (0.64-0.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * New upstream release:
+    + Now correctly builds with Perl5.10 (Closes: #463539)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Fri, 09 May 2008 11:41:13 +0200
+
+libdevel-cover-perl (0.61-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Florian Ragwitz <rafl@debian.org>  Fri, 23 Feb 2007 10:06:11 +0100
+
+libdevel-cover-perl (0.59-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Florian Ragwitz <rafl@debian.org>  Wed, 23 Aug 2006 13:13:40 +0200
+
+libdevel-cover-perl (0.58-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Florian Ragwitz <rafl@debian.org>  Mon,  7 Aug 2006 13:22:09 +0200
+
+libdevel-cover-perl (0.57-1) unstable; urgency=low
+
+  * New upstream release.
+    + Incoporates all dpatches. Removing them therefor.
+  * Added (build-)dependency to libppi-html-perl | perltidy for syntax
+    highlighting.
+
+ -- Florian Ragwitz <rafl@debian.org>  Thu,  3 Aug 2006 18:50:06 +0200
+
+libdevel-cover-perl (0.55-2) unstable; urgency=low
+
+  * Rebuild against latest perl (Closes: #370663).
+  * Use more secure permissions for the cover_db (Closes: #362015).
+    + Added debian/patches/cover_db_permissions.dpatch.
+    + Build-Depend on dpatch.
+    + Adjusted debian/rules to use dpatch.
+  * Make a dpatch out of the patch that fixes the realclean target, which was
+    directly in the diff.gz before.
+  * Bump up Standards-Version to 3.7.2 (no changes).
+  * Build-Depend on libpod-coverage-perl to run Pod::Coverage and
+    Pod::Coverage::CountParents tests during the build.
+  * Suggest libpod-coverage-perl and libtest-differences-perl. Those aren't
+    strictly required but quite usefull to a) get pod coverage information and
+    b) to have a nice output telling you why a test failed.
+
+ -- Florian Ragwitz <rafl@debian.org>  Wed,  7 Jun 2006 14:12:32 +0200
+
+libdevel-cover-perl (0.55-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Florian Ragwitz <rafl@debian.org>  Tue,  6 Jun 2006 13:46:49 +0200

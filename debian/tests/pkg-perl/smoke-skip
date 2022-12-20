@@ -1,0 +1,7 @@
+# https://lists.alioth.debian.org/pipermail/reproducible-builds/Week-of-Mon-20160418/005305.html
+t/e2e/change.t
+t/e2e/eval_merge.t
+t/e2e/eval_merge_sep.t
+t/e2e/eval_sub.t
+t/e2e/eval_use.t
+t/e2e/md5.t
