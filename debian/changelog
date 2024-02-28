@@ -1,8 +1,33 @@
-libdevel-cover-perl (1.36-deepin1) unstable; urgency=medium
+libdevel-cover-perl (1.40-1) unstable; urgency=medium
 
-  * Rebuild
+  * Import upstream version 1.40.
+  * Update years of upstream and packaging copyright.
+  * Update (test) dependencies: remove libb-debug-perl.
+  * Declare compliance with Debian Policy 4.6.2.
 
- -- Deepin Packages Builder <packages@deepin.org>  Mon, 14 Nov 2022 17:44:39 +0800
+ -- gregor herrmann <gregoa@debian.org>  Mon, 03 Jul 2023 18:36:37 +0200
+
+libdevel-cover-perl (1.38-1) unstable; urgency=medium
+
+  * Import upstream version 1.38.
+  * Add myself to debian/copyright.
+
+ -- Axel Beckert <abe@debian.org>  Thu, 09 Jun 2022 02:54:29 +0200
+
+libdevel-cover-perl (1.37-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Update standards version to 4.6.0, no changes needed.
+
+  [ gregor herrmann ]
+  * Import upstream version 1.37.
+  * Update years of upstream and packaging copyright.
+  * Declare compliance with Debian Policy 4.6.1.
+  * Update alternative (build) dependencies.
+  * Update Build-Depends for cross builds.
+  * Update debian/upstream/metadata.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 05 Jun 2022 14:40:04 +0200
 
 libdevel-cover-perl (1.36-2) unstable; urgency=medium
 
